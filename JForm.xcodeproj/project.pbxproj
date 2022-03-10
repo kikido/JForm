@@ -1,0 +1,821 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1C767A50FCFFAAC2DFD1CC98 /* libPods-JFormTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F04A01B8BC6A4FA843AB6E91 /* libPods-JFormTests.a */; };
+		1D820BFA26BA371C00E0F853 /* FormViewControlelr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D820BF926BA371C00E0F853 /* FormViewControlelr.swift */; };
+		1D820BFC26BA7D6400E0F853 /* OptionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D820BFB26BA7D6400E0F853 /* OptionItem.swift */; };
+		1DA20B4B27C8A7AA00161E8B /* JFormDescriptorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA20B4A27C8A7AA00161E8B /* JFormDescriptorDelegate.swift */; };
+		1DADC74927682F9900520C91 /* FormFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DADC74827682F9900520C91 /* FormFormViewController.swift */; };
+		1DBFF21826AE95DD00C5DEAA /* JSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBFF21726AE95DD00C5DEAA /* JSelectViewController.swift */; };
+		1DBFF22626AFF16700C5DEAA /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBFF22526AFF16700C5DEAA /* TextViewController.swift */; };
+		1DBFF22826AFF17000C5DEAA /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBFF22726AFF17000C5DEAA /* SelectViewController.swift */; };
+		1DBFF22A26AFF17900C5DEAA /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBFF22926AFF17900C5DEAA /* DateViewController.swift */; };
+		1DBFF22C26AFF18400C5DEAA /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBFF22B26AFF18400C5DEAA /* OtherViewController.swift */; };
+		1DBFF22E26AFF18E00C5DEAA /* ValidatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBFF22D26AFF18E00C5DEAA /* ValidatorViewController.swift */; };
+		1DBFF24426B8DAF700C5DEAA /* JValidateResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBFF24326B8DAF700C5DEAA /* JValidateResult.swift */; };
+		1DBFF24626B8DB3100C5DEAA /* JRegexValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBFF24526B8DB3000C5DEAA /* JRegexValidator.swift */; };
+		1DE6341E2797EB39006380DC /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE6341D2797EB39006380DC /* TestViewController.swift */; };
+		1DE7E77A26A54C48007EE3F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE7E77926A54C48007EE3F9 /* AppDelegate.swift */; };
+		1DE7E77E26A54C48007EE3F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE7E77D26A54C48007EE3F9 /* ViewController.swift */; };
+		1DE7E78126A54C48007EE3F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DE7E77F26A54C48007EE3F9 /* Main.storyboard */; };
+		1DE7E78326A54C4B007EE3F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DE7E78226A54C4B007EE3F9 /* Assets.xcassets */; };
+		1DE7E78626A54C4B007EE3F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DE7E78426A54C4B007EE3F9 /* LaunchScreen.storyboard */; };
+		1DE7E79126A54C4B007EE3F9 /* JFormTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE7E79026A54C4B007EE3F9 /* JFormTests.swift */; };
+		1DE7E7AC26A5525A007EE3F9 /* BaseDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE7E7AB26A5525A007EE3F9 /* BaseDescriptor.swift */; };
+		1DE7E7AE26A55272007EE3F9 /* RowDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE7E7AD26A55272007EE3F9 /* RowDescriptor.swift */; };
+		1DE7E7B026A55281007EE3F9 /* SectionDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE7E7AF26A55281007EE3F9 /* SectionDescriptor.swift */; };
+		1DE7E7B226A5529D007EE3F9 /* FormDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE7E7B126A5529D007EE3F9 /* FormDescriptor.swift */; };
+		1DE7E7B426A554A9007EE3F9 /* CommonAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE7E7B326A554A9007EE3F9 /* CommonAttributes.swift */; };
+		1DE7E7B726A5C041007EE3F9 /* JValidateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE7E7B626A5C041007EE3F9 /* JValidateProtocol.swift */; };
+		1DE7E7BB26A666B3007EE3F9 /* JForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE7E7BA26A666B3007EE3F9 /* JForm.swift */; };
+		1DE7E7BE26A6680D007EE3F9 /* JFormDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE7E7BD26A6680D007EE3F9 /* JFormDelegate.swift */; };
+		1DE7E7C026A66CBD007EE3F9 /* JBaseCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE7E7BF26A66CBD007EE3F9 /* JBaseCellNode.swift */; };
+		1DE7E7C526A6FE98007EE3F9 /* JTextFieldCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE7E7C426A6FE98007EE3F9 /* JTextFieldCellNode.swift */; };
+		1DE7E7C726A70055007EE3F9 /* JTextViewCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE7E7C626A70055007EE3F9 /* JTextViewCellNode.swift */; };
+		1DE7E7C926A7045B007EE3F9 /* JSelectCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE7E7C826A7045B007EE3F9 /* JSelectCellNode.swift */; };
+		1DE7E7CB26A7046F007EE3F9 /* JDateCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE7E7CA26A7046F007EE3F9 /* JDateCellNode.swift */; };
+		1DE7E7CD26A7047A007EE3F9 /* JDateInlineCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE7E7CC26A7047A007EE3F9 /* JDateInlineCellNode.swift */; };
+		1DE7E7CF26A7048A007EE3F9 /* JSwitchCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE7E7CE26A7048A007EE3F9 /* JSwitchCellNode.swift */; };
+		1DE7E7D126A70499007EE3F9 /* JCheckCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE7E7D026A70499007EE3F9 /* JCheckCellNode.swift */; };
+		1DE7E7D326A704A5007EE3F9 /* JStepCounterCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE7E7D226A704A5007EE3F9 /* JStepCounterCellNode.swift */; };
+		1DE7E7D526A704B1007EE3F9 /* JSegmentCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE7E7D426A704B1007EE3F9 /* JSegmentCellNode.swift */; };
+		1DE7E7D726A704C5007EE3F9 /* JSliderCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE7E7D626A704C5007EE3F9 /* JSliderCellNode.swift */; };
+		1DE7E7DA26A7B81E007EE3F9 /* ColorConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE7E7D926A7B81E007EE3F9 /* ColorConvertible.swift */; };
+		1DE7E7E226A96F13007EE3F9 /* JInfoCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE7E7E126A96F13007EE3F9 /* JInfoCellNode.swift */; };
+		1DE9BA71275DFBA800D8E6F8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DE9BA70275DFBA800D8E6F8 /* CoreGraphics.framework */; };
+		1DE9BA73275DFBB600D8E6F8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DE9BA72275DFBB600D8E6F8 /* QuartzCore.framework */; };
+		1DE9BA76275EF1DF00D8E6F8 /* UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9BA75275EF1DF00D8E6F8 /* UITests.swift */; };
+		1DE9BA7B275EFD8500D8E6F8 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DE9BA7A275EFD8500D8E6F8 /* IOKit.framework */; };
+		1DE9BA84275F018600D8E6F8 /* libKIF.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DE9BA83275F018600D8E6F8 /* libKIF.a */; };
+		1DE9BA86275F01DB00D8E6F8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DE9BA85275F01DB00D8E6F8 /* XCTest.framework */; };
+		1DE9BA88275F419300D8E6F8 /* JFormTests-Bridging-Header.h in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9BA7C275EFE2500D8E6F8 /* JFormTests-Bridging-Header.h */; };
+		4F90F1620094F7D0D3437B4F /* Pods_JForm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD482B9BB665807E0184B74 /* Pods_JForm.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1DE7E78D26A54C4B007EE3F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1DE7E76E26A54C48007EE3F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1DE7E77526A54C48007EE3F9;
+			remoteInfo = JForm;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1D820BF926BA371C00E0F853 /* FormViewControlelr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewControlelr.swift; sourceTree = "<group>"; };
+		1D820BFB26BA7D6400E0F853 /* OptionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionItem.swift; sourceTree = "<group>"; };
+		1DA20B4A27C8A7AA00161E8B /* JFormDescriptorDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFormDescriptorDelegate.swift; sourceTree = "<group>"; };
+		1DADC74827682F9900520C91 /* FormFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormFormViewController.swift; sourceTree = "<group>"; };
+		1DBFF21726AE95DD00C5DEAA /* JSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSelectViewController.swift; sourceTree = "<group>"; };
+		1DBFF22526AFF16700C5DEAA /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
+		1DBFF22726AFF17000C5DEAA /* SelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectViewController.swift; sourceTree = "<group>"; };
+		1DBFF22926AFF17900C5DEAA /* DateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
+		1DBFF22B26AFF18400C5DEAA /* OtherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
+		1DBFF22D26AFF18E00C5DEAA /* ValidatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorViewController.swift; sourceTree = "<group>"; };
+		1DBFF24326B8DAF700C5DEAA /* JValidateResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JValidateResult.swift; sourceTree = "<group>"; };
+		1DBFF24526B8DB3000C5DEAA /* JRegexValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JRegexValidator.swift; sourceTree = "<group>"; };
+		1DE6341D2797EB39006380DC /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		1DE7E77626A54C48007EE3F9 /* JForm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JForm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DE7E77926A54C48007EE3F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1DE7E77D26A54C48007EE3F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1DE7E78026A54C48007EE3F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1DE7E78226A54C4B007EE3F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1DE7E78526A54C4B007EE3F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1DE7E78726A54C4B007EE3F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DE7E78C26A54C4B007EE3F9 /* JFormTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JFormTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DE7E79026A54C4B007EE3F9 /* JFormTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFormTests.swift; sourceTree = "<group>"; };
+		1DE7E79226A54C4B007EE3F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DE7E7AB26A5525A007EE3F9 /* BaseDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDescriptor.swift; sourceTree = "<group>"; };
+		1DE7E7AD26A55272007EE3F9 /* RowDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowDescriptor.swift; sourceTree = "<group>"; };
+		1DE7E7AF26A55281007EE3F9 /* SectionDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDescriptor.swift; sourceTree = "<group>"; };
+		1DE7E7B126A5529D007EE3F9 /* FormDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormDescriptor.swift; sourceTree = "<group>"; };
+		1DE7E7B326A554A9007EE3F9 /* CommonAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonAttributes.swift; sourceTree = "<group>"; };
+		1DE7E7B626A5C041007EE3F9 /* JValidateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JValidateProtocol.swift; sourceTree = "<group>"; };
+		1DE7E7BA26A666B3007EE3F9 /* JForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JForm.swift; sourceTree = "<group>"; };
+		1DE7E7BD26A6680D007EE3F9 /* JFormDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFormDelegate.swift; sourceTree = "<group>"; };
+		1DE7E7BF26A66CBD007EE3F9 /* JBaseCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JBaseCellNode.swift; sourceTree = "<group>"; };
+		1DE7E7C426A6FE98007EE3F9 /* JTextFieldCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTextFieldCellNode.swift; sourceTree = "<group>"; };
+		1DE7E7C626A70055007EE3F9 /* JTextViewCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTextViewCellNode.swift; sourceTree = "<group>"; };
+		1DE7E7C826A7045B007EE3F9 /* JSelectCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSelectCellNode.swift; sourceTree = "<group>"; };
+		1DE7E7CA26A7046F007EE3F9 /* JDateCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDateCellNode.swift; sourceTree = "<group>"; };
+		1DE7E7CC26A7047A007EE3F9 /* JDateInlineCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDateInlineCellNode.swift; sourceTree = "<group>"; };
+		1DE7E7CE26A7048A007EE3F9 /* JSwitchCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSwitchCellNode.swift; sourceTree = "<group>"; };
+		1DE7E7D026A70499007EE3F9 /* JCheckCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JCheckCellNode.swift; sourceTree = "<group>"; };
+		1DE7E7D226A704A5007EE3F9 /* JStepCounterCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JStepCounterCellNode.swift; sourceTree = "<group>"; };
+		1DE7E7D426A704B1007EE3F9 /* JSegmentCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSegmentCellNode.swift; sourceTree = "<group>"; };
+		1DE7E7D626A704C5007EE3F9 /* JSliderCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSliderCellNode.swift; sourceTree = "<group>"; };
+		1DE7E7D926A7B81E007EE3F9 /* ColorConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConvertible.swift; sourceTree = "<group>"; };
+		1DE7E7E126A96F13007EE3F9 /* JInfoCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JInfoCellNode.swift; sourceTree = "<group>"; };
+		1DE9BA70275DFBA800D8E6F8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		1DE9BA72275DFBB600D8E6F8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		1DE9BA75275EF1DF00D8E6F8 /* UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITests.swift; sourceTree = "<group>"; };
+		1DE9BA7A275EFD8500D8E6F8 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk/System/Library/Frameworks/IOKit.framework; sourceTree = DEVELOPER_DIR; };
+		1DE9BA7C275EFE2500D8E6F8 /* JFormTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JFormTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		1DE9BA83275F018600D8E6F8 /* libKIF.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libKIF.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DE9BA85275F01DB00D8E6F8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		256C2159558373B227EE838D /* Pods-JForm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JForm.release.xcconfig"; path = "Target Support Files/Pods-JForm/Pods-JForm.release.xcconfig"; sourceTree = "<group>"; };
+		750701BF502CB83A9D607C6E /* Pods-JForm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JForm.debug.xcconfig"; path = "Target Support Files/Pods-JForm/Pods-JForm.debug.xcconfig"; sourceTree = "<group>"; };
+		824FA5EC985301EC5DD1B999 /* Pods-JFormTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JFormTests.release.xcconfig"; path = "Target Support Files/Pods-JFormTests/Pods-JFormTests.release.xcconfig"; sourceTree = "<group>"; };
+		9CD482B9BB665807E0184B74 /* Pods_JForm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JForm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD0DF0DA09D5C0DD8EA63FF8 /* Pods-JFormTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JFormTests.debug.xcconfig"; path = "Target Support Files/Pods-JFormTests/Pods-JFormTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F04A01B8BC6A4FA843AB6E91 /* libPods-JFormTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JFormTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1DE7E77326A54C48007EE3F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F90F1620094F7D0D3437B4F /* Pods_JForm.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DE7E78926A54C4B007EE3F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DE9BA86275F01DB00D8E6F8 /* XCTest.framework in Frameworks */,
+				1DE9BA84275F018600D8E6F8 /* libKIF.a in Frameworks */,
+				1DE9BA7B275EFD8500D8E6F8 /* IOKit.framework in Frameworks */,
+				1DE9BA73275DFBB600D8E6F8 /* QuartzCore.framework in Frameworks */,
+				1DE9BA71275DFBA800D8E6F8 /* CoreGraphics.framework in Frameworks */,
+				1C767A50FCFFAAC2DFD1CC98 /* libPods-JFormTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1DBFF24226B8DA9800C5DEAA /* validator */ = {
+			isa = PBXGroup;
+			children = (
+				1DBFF24326B8DAF700C5DEAA /* JValidateResult.swift */,
+				1DBFF24526B8DB3000C5DEAA /* JRegexValidator.swift */,
+			);
+			path = validator;
+			sourceTree = "<group>";
+		};
+		1DE7E76D26A54C48007EE3F9 = {
+			isa = PBXGroup;
+			children = (
+				1DE7E77826A54C48007EE3F9 /* JForm */,
+				1DE7E78F26A54C4B007EE3F9 /* JFormTests */,
+				1DE7E77726A54C48007EE3F9 /* Products */,
+				42BAE7E8312F3ACE9F8B76C5 /* Pods */,
+				DEF7504F0960344CCCD8CE9E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1DE7E77726A54C48007EE3F9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1DE7E77626A54C48007EE3F9 /* JForm.app */,
+				1DE7E78C26A54C4B007EE3F9 /* JFormTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1DE7E77826A54C48007EE3F9 /* JForm */ = {
+			isa = PBXGroup;
+			children = (
+				1DE7E7A926A54DC3007EE3F9 /* JForm */,
+				1DE7E77926A54C48007EE3F9 /* AppDelegate.swift */,
+				1DE7E77D26A54C48007EE3F9 /* ViewController.swift */,
+				1DBFF22526AFF16700C5DEAA /* TextViewController.swift */,
+				1DBFF22726AFF17000C5DEAA /* SelectViewController.swift */,
+				1DBFF22926AFF17900C5DEAA /* DateViewController.swift */,
+				1DBFF22B26AFF18400C5DEAA /* OtherViewController.swift */,
+				1DBFF22D26AFF18E00C5DEAA /* ValidatorViewController.swift */,
+				1D820BF926BA371C00E0F853 /* FormViewControlelr.swift */,
+				1DADC74827682F9900520C91 /* FormFormViewController.swift */,
+				1DE6341D2797EB39006380DC /* TestViewController.swift */,
+				1DE7E77F26A54C48007EE3F9 /* Main.storyboard */,
+				1DE7E78226A54C4B007EE3F9 /* Assets.xcassets */,
+				1DE7E78426A54C4B007EE3F9 /* LaunchScreen.storyboard */,
+				1DE7E78726A54C4B007EE3F9 /* Info.plist */,
+			);
+			path = JForm;
+			sourceTree = "<group>";
+		};
+		1DE7E78F26A54C4B007EE3F9 /* JFormTests */ = {
+			isa = PBXGroup;
+			children = (
+				1DE7E79026A54C4B007EE3F9 /* JFormTests.swift */,
+				1DE9BA75275EF1DF00D8E6F8 /* UITests.swift */,
+				1DE9BA7C275EFE2500D8E6F8 /* JFormTests-Bridging-Header.h */,
+				1DE7E79226A54C4B007EE3F9 /* Info.plist */,
+			);
+			path = JFormTests;
+			sourceTree = "<group>";
+		};
+		1DE7E7A926A54DC3007EE3F9 /* JForm */ = {
+			isa = PBXGroup;
+			children = (
+				1DBFF24226B8DA9800C5DEAA /* validator */,
+				1DE7E7D826A7B806007EE3F9 /* helper */,
+				1DE7E7BC26A666CC007EE3F9 /* cell */,
+				1DE7E7B526A5C01C007EE3F9 /* protocol */,
+				1DE7E7AA26A54E92007EE3F9 /* descriptor */,
+				1DE7E7B326A554A9007EE3F9 /* CommonAttributes.swift */,
+				1DE7E7BA26A666B3007EE3F9 /* JForm.swift */,
+			);
+			path = JForm;
+			sourceTree = "<group>";
+		};
+		1DE7E7AA26A54E92007EE3F9 /* descriptor */ = {
+			isa = PBXGroup;
+			children = (
+				1DE7E7AB26A5525A007EE3F9 /* BaseDescriptor.swift */,
+				1DE7E7AD26A55272007EE3F9 /* RowDescriptor.swift */,
+				1DE7E7AF26A55281007EE3F9 /* SectionDescriptor.swift */,
+				1DE7E7B126A5529D007EE3F9 /* FormDescriptor.swift */,
+			);
+			path = descriptor;
+			sourceTree = "<group>";
+		};
+		1DE7E7B526A5C01C007EE3F9 /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+				1DE7E7B626A5C041007EE3F9 /* JValidateProtocol.swift */,
+				1DA20B4A27C8A7AA00161E8B /* JFormDescriptorDelegate.swift */,
+				1DE7E7BD26A6680D007EE3F9 /* JFormDelegate.swift */,
+			);
+			path = protocol;
+			sourceTree = "<group>";
+		};
+		1DE7E7BC26A666CC007EE3F9 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				1DE7E7BF26A66CBD007EE3F9 /* JBaseCellNode.swift */,
+				1DE7E7C426A6FE98007EE3F9 /* JTextFieldCellNode.swift */,
+				1DE7E7C626A70055007EE3F9 /* JTextViewCellNode.swift */,
+				1DE7E7E126A96F13007EE3F9 /* JInfoCellNode.swift */,
+				1DE7E7C826A7045B007EE3F9 /* JSelectCellNode.swift */,
+				1DE7E7CA26A7046F007EE3F9 /* JDateCellNode.swift */,
+				1DE7E7CC26A7047A007EE3F9 /* JDateInlineCellNode.swift */,
+				1DE7E7CE26A7048A007EE3F9 /* JSwitchCellNode.swift */,
+				1DE7E7D026A70499007EE3F9 /* JCheckCellNode.swift */,
+				1DE7E7D226A704A5007EE3F9 /* JStepCounterCellNode.swift */,
+				1DE7E7D426A704B1007EE3F9 /* JSegmentCellNode.swift */,
+				1DE7E7D626A704C5007EE3F9 /* JSliderCellNode.swift */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		1DE7E7D826A7B806007EE3F9 /* helper */ = {
+			isa = PBXGroup;
+			children = (
+				1D820BFB26BA7D6400E0F853 /* OptionItem.swift */,
+				1DE7E7D926A7B81E007EE3F9 /* ColorConvertible.swift */,
+				1DBFF21726AE95DD00C5DEAA /* JSelectViewController.swift */,
+			);
+			path = helper;
+			sourceTree = "<group>";
+		};
+		42BAE7E8312F3ACE9F8B76C5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				750701BF502CB83A9D607C6E /* Pods-JForm.debug.xcconfig */,
+				256C2159558373B227EE838D /* Pods-JForm.release.xcconfig */,
+				BD0DF0DA09D5C0DD8EA63FF8 /* Pods-JFormTests.debug.xcconfig */,
+				824FA5EC985301EC5DD1B999 /* Pods-JFormTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DEF7504F0960344CCCD8CE9E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DE9BA85275F01DB00D8E6F8 /* XCTest.framework */,
+				1DE9BA83275F018600D8E6F8 /* libKIF.a */,
+				1DE9BA7A275EFD8500D8E6F8 /* IOKit.framework */,
+				1DE9BA72275DFBB600D8E6F8 /* QuartzCore.framework */,
+				1DE9BA70275DFBA800D8E6F8 /* CoreGraphics.framework */,
+				9CD482B9BB665807E0184B74 /* Pods_JForm.framework */,
+				F04A01B8BC6A4FA843AB6E91 /* libPods-JFormTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1DE7E77526A54C48007EE3F9 /* JForm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DE7E7A026A54C4B007EE3F9 /* Build configuration list for PBXNativeTarget "JForm" */;
+			buildPhases = (
+				977BEBEDE4BDBC42E8586255 /* [CP] Check Pods Manifest.lock */,
+				1DE7E77226A54C48007EE3F9 /* Sources */,
+				1DE7E77326A54C48007EE3F9 /* Frameworks */,
+				1DE7E77426A54C48007EE3F9 /* Resources */,
+				88C5BA6D794685797CED27A5 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JForm;
+			productName = JForm;
+			productReference = 1DE7E77626A54C48007EE3F9 /* JForm.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1DE7E78B26A54C4B007EE3F9 /* JFormTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DE7E7A326A54C4B007EE3F9 /* Build configuration list for PBXNativeTarget "JFormTests" */;
+			buildPhases = (
+				49E8799F9A5296C0B63C4BB0 /* [CP] Check Pods Manifest.lock */,
+				1DE7E78826A54C4B007EE3F9 /* Sources */,
+				1DE7E78926A54C4B007EE3F9 /* Frameworks */,
+				1DE7E78A26A54C4B007EE3F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1DE7E78E26A54C4B007EE3F9 /* PBXTargetDependency */,
+			);
+			name = JFormTests;
+			productName = JFormTests;
+			productReference = 1DE7E78C26A54C4B007EE3F9 /* JFormTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1DE7E76E26A54C48007EE3F9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					1DE7E77526A54C48007EE3F9 = {
+						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
+					};
+					1DE7E78B26A54C4B007EE3F9 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 1DE7E77526A54C48007EE3F9;
+					};
+				};
+			};
+			buildConfigurationList = 1DE7E77126A54C48007EE3F9 /* Build configuration list for PBXProject "JForm" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1DE7E76D26A54C48007EE3F9;
+			productRefGroup = 1DE7E77726A54C48007EE3F9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1DE7E77526A54C48007EE3F9 /* JForm */,
+				1DE7E78B26A54C4B007EE3F9 /* JFormTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1DE7E77426A54C48007EE3F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DE7E78626A54C4B007EE3F9 /* LaunchScreen.storyboard in Resources */,
+				1DE7E78326A54C4B007EE3F9 /* Assets.xcassets in Resources */,
+				1DE7E78126A54C48007EE3F9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DE7E78A26A54C4B007EE3F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		49E8799F9A5296C0B63C4BB0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JFormTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88C5BA6D794685797CED27A5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JForm/Pods-JForm-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JForm/Pods-JForm-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JForm/Pods-JForm-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		977BEBEDE4BDBC42E8586255 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JForm-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1DE7E77226A54C48007EE3F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DE7E7BB26A666B3007EE3F9 /* JForm.swift in Sources */,
+				1DE7E7CF26A7048A007EE3F9 /* JSwitchCellNode.swift in Sources */,
+				1DBFF22A26AFF17900C5DEAA /* DateViewController.swift in Sources */,
+				1DE7E7C726A70055007EE3F9 /* JTextViewCellNode.swift in Sources */,
+				1DE7E7B726A5C041007EE3F9 /* JValidateProtocol.swift in Sources */,
+				1DE6341E2797EB39006380DC /* TestViewController.swift in Sources */,
+				1DBFF22E26AFF18E00C5DEAA /* ValidatorViewController.swift in Sources */,
+				1DBFF22626AFF16700C5DEAA /* TextViewController.swift in Sources */,
+				1DE7E7CD26A7047A007EE3F9 /* JDateInlineCellNode.swift in Sources */,
+				1DBFF24426B8DAF700C5DEAA /* JValidateResult.swift in Sources */,
+				1DE7E77E26A54C48007EE3F9 /* ViewController.swift in Sources */,
+				1DE7E7D326A704A5007EE3F9 /* JStepCounterCellNode.swift in Sources */,
+				1DA20B4B27C8A7AA00161E8B /* JFormDescriptorDelegate.swift in Sources */,
+				1DE7E7B426A554A9007EE3F9 /* CommonAttributes.swift in Sources */,
+				1DE7E7B226A5529D007EE3F9 /* FormDescriptor.swift in Sources */,
+				1DADC74927682F9900520C91 /* FormFormViewController.swift in Sources */,
+				1DE7E7E226A96F13007EE3F9 /* JInfoCellNode.swift in Sources */,
+				1DE7E7AC26A5525A007EE3F9 /* BaseDescriptor.swift in Sources */,
+				1DE7E7D726A704C5007EE3F9 /* JSliderCellNode.swift in Sources */,
+				1D820BFA26BA371C00E0F853 /* FormViewControlelr.swift in Sources */,
+				1DE7E7B026A55281007EE3F9 /* SectionDescriptor.swift in Sources */,
+				1DBFF24626B8DB3100C5DEAA /* JRegexValidator.swift in Sources */,
+				1DE7E7DA26A7B81E007EE3F9 /* ColorConvertible.swift in Sources */,
+				1DBFF21826AE95DD00C5DEAA /* JSelectViewController.swift in Sources */,
+				1DE7E7D526A704B1007EE3F9 /* JSegmentCellNode.swift in Sources */,
+				1DBFF22C26AFF18400C5DEAA /* OtherViewController.swift in Sources */,
+				1DE7E77A26A54C48007EE3F9 /* AppDelegate.swift in Sources */,
+				1DE7E7AE26A55272007EE3F9 /* RowDescriptor.swift in Sources */,
+				1D820BFC26BA7D6400E0F853 /* OptionItem.swift in Sources */,
+				1DE7E7D126A70499007EE3F9 /* JCheckCellNode.swift in Sources */,
+				1DE7E7CB26A7046F007EE3F9 /* JDateCellNode.swift in Sources */,
+				1DE7E7BE26A6680D007EE3F9 /* JFormDelegate.swift in Sources */,
+				1DE7E7C026A66CBD007EE3F9 /* JBaseCellNode.swift in Sources */,
+				1DBFF22826AFF17000C5DEAA /* SelectViewController.swift in Sources */,
+				1DE7E7C926A7045B007EE3F9 /* JSelectCellNode.swift in Sources */,
+				1DE7E7C526A6FE98007EE3F9 /* JTextFieldCellNode.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DE7E78826A54C4B007EE3F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DE9BA88275F419300D8E6F8 /* JFormTests-Bridging-Header.h in Sources */,
+				1DE7E79126A54C4B007EE3F9 /* JFormTests.swift in Sources */,
+				1DE9BA76275EF1DF00D8E6F8 /* UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1DE7E78E26A54C4B007EE3F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1DE7E77526A54C48007EE3F9 /* JForm */;
+			targetProxy = 1DE7E78D26A54C4B007EE3F9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1DE7E77F26A54C48007EE3F9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DE7E78026A54C48007EE3F9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1DE7E78426A54C4B007EE3F9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DE7E78526A54C4B007EE3F9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1DE7E79E26A54C4B007EE3F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1DE7E79F26A54C4B007EE3F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1DE7E7A126A54C4B007EE3F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 750701BF502CB83A9D607C6E /* Pods-JForm.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WX88XVVE62;
+				INFOPLIST_FILE = JForm/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.juesheng.JForm;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1DE7E7A226A54C4B007EE3F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 256C2159558373B227EE838D /* Pods-JForm.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WX88XVVE62;
+				INFOPLIST_FILE = JForm/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.juesheng.JForm;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1DE7E7A426A54C4B007EE3F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD0DF0DA09D5C0DD8EA63FF8 /* Pods-JFormTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WX88XVVE62;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(PLATFORM_DIR)/Developer/Library/Frameworks\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Texture\"",
+				);
+				INFOPLIST_FILE = JFormTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_LDFLAGS = (
+					"-framework",
+					IOKit,
+					"-ObjC",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.juesheng.JFormTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/dqh/1-自己的项目/JForm/JFormTests/JFormTests-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JForm.app/JForm";
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		1DE7E7A526A54C4B007EE3F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 824FA5EC985301EC5DD1B999 /* Pods-JFormTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WX88XVVE62;
+				INFOPLIST_FILE = JFormTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_LDFLAGS = (
+					"-framework",
+					IOKit,
+					"-ObjC",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.juesheng.JFormTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/dqh/1-自己的项目/JForm/JFormTests/JFormTests-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JForm.app/JForm";
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DE7E77126A54C48007EE3F9 /* Build configuration list for PBXProject "JForm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DE7E79E26A54C4B007EE3F9 /* Debug */,
+				1DE7E79F26A54C4B007EE3F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DE7E7A026A54C4B007EE3F9 /* Build configuration list for PBXNativeTarget "JForm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DE7E7A126A54C4B007EE3F9 /* Debug */,
+				1DE7E7A226A54C4B007EE3F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DE7E7A326A54C4B007EE3F9 /* Build configuration list for PBXNativeTarget "JFormTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DE7E7A426A54C4B007EE3F9 /* Debug */,
+				1DE7E7A526A54C4B007EE3F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1DE7E76E26A54C48007EE3F9 /* Project object */;
+}

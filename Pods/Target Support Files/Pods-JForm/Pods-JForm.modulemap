@@ -1,0 +1,6 @@
+framework module Pods_JForm {
+  umbrella header "Pods-JForm-umbrella.h"
+
+  export *
+  module * { export * }
+}
