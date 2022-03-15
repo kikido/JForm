@@ -250,6 +250,38 @@ extension JBaseCellNode {
     }
 }
 
+// MARK: - UIImage Ex
+
+extension UIImage {
+    
+    static func imageInBundle(named name: String) -> UIImage? {
+        struct Helper {
+            static var scale: CGFloat?
+            static var bundle: Bundle?
+        }
+        
+        var image = UIImage.init(named: name)
+        if image == nil {
+            if let url = Bundle.main.url(forResource: "JForm", withExtension: "bundle"), Helper.scale == nil {
+                objc_sync_enter(name)
+
+                if Helper.scale == nil {
+                    Helper.scale = UIScreen.main.scale
+                    Helper.bundle = Bundle.init(url: url)
+                }
+                
+                objc_sync_exit(name)
+            }
+            
+            let imageName = name + (Helper.scale == 3 ? "@3x" : "@2x")
+            if let path = Helper.bundle?.path(forResource: imageName, ofType: "png") {
+                image = UIImage.init(contentsOfFile: path)
+            }
+        }
+        return image
+    }
+}
+
 // MARK: - Attribute String
 
 struct RichTextStyle {

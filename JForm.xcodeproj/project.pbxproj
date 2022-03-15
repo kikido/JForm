@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1C767A50FCFFAAC2DFD1CC98 /* libPods-JFormTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F04A01B8BC6A4FA843AB6E91 /* libPods-JFormTests.a */; };
+		1D5B70E327E0315E00E35BB3 /* JForm.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1D5B70E227E0315E00E35BB3 /* JForm.bundle */; };
 		1D820BFA26BA371C00E0F853 /* FormViewControlelr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D820BF926BA371C00E0F853 /* FormViewControlelr.swift */; };
 		1D820BFC26BA7D6400E0F853 /* OptionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D820BFB26BA7D6400E0F853 /* OptionItem.swift */; };
 		1DA20B4B27C8A7AA00161E8B /* JFormDescriptorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA20B4A27C8A7AA00161E8B /* JFormDescriptorDelegate.swift */; };
@@ -69,6 +70,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D5B70E227E0315E00E35BB3 /* JForm.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = JForm.bundle; sourceTree = "<group>"; };
 		1D820BF926BA371C00E0F853 /* FormViewControlelr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewControlelr.swift; sourceTree = "<group>"; };
 		1D820BFB26BA7D6400E0F853 /* OptionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionItem.swift; sourceTree = "<group>"; };
 		1DA20B4A27C8A7AA00161E8B /* JFormDescriptorDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFormDescriptorDelegate.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				1DE7E78226A54C4B007EE3F9 /* Assets.xcassets */,
 				1DE7E78426A54C4B007EE3F9 /* LaunchScreen.storyboard */,
 				1DE7E78726A54C4B007EE3F9 /* Info.plist */,
+				1D5B70E227E0315E00E35BB3 /* JForm.bundle */,
 			);
 			path = JForm;
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 			files = (
 				1DE7E78626A54C4B007EE3F9 /* LaunchScreen.storyboard in Resources */,
 				1DE7E78326A54C4B007EE3F9 /* Assets.xcassets in Resources */,
+				1D5B70E327E0315E00E35BB3 /* JForm.bundle in Resources */,
 				1DE7E78126A54C48007EE3F9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
