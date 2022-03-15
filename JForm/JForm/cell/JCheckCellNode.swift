@@ -19,7 +19,7 @@ public class JCheckCellNode: JBaseCellNode {
     
     required init(with rowDescriptor: RowDescriptor) {
         checkNode = ASImageNode()
-        checkNode.image = UIImage(named: "jt_mark")
+        checkNode.image = UIImage.imageInBundle(named: "jt_mark")
         super.init(with: rowDescriptor)
     }
     
