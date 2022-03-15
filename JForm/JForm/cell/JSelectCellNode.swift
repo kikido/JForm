@@ -48,7 +48,7 @@ public class JSelectCellNode: JBaseCellNode {
         triggerNode = ASEditableTextNode()
         
         accessoryNode = ASImageNode()
-        accessoryNode.image = UIImage(named: "jt_cell_disclosureIndicator")
+        accessoryNode.image = UIImage.imageInBundle(named: "jt_cell_disclosureIndicator")
         
         super.init(with: rowDescriptor)
     }
