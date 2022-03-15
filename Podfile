@@ -3,20 +3,16 @@
 
 target 'JForm' do
   # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
+  # use_frameworks!
+  #use_modular_headers!
 
   # Pods for JForm
-
-  pod "Texture"
+  pod "Texture", :modular_headers => true
 end
   
 target 'JFormTests' do
   inherit! :search_paths
   # Pods for testing
   pod 'KIF', :configurations => ['Debug']
-#  pod 'KIF', :configurations => ['Debug']
 end
 
-#target 'JFormUITests' do
-#  # Pods for testing
-#end

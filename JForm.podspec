@@ -17,17 +17,24 @@ Pod::Spec.new do |spec|
 
   spec.name         = "JForm"
   spec.version      = "0.0.1"
-  spec.summary      = "A short description of JForm."
+  spec.summary      = "简单快速的创建复杂且流畅的表单"
+  spec.homepage     = "https://github.com/kikido/JForm"
+  spec.license      = { :type => "MIT", :file => "LICENSE" }
+  spec.author             = { "qianxing" => "kikido1992@gmail.com" }
+  spec.source       = { :git => "https://github.com/kikido/JForm.git", :tag => "#{spec.version}" }
+  spec.source_files  = "Classes", "JForm/JForm/**/*.{swift}"
+  spec.dependency "Texture"
+  spec.requires_arc = true
+  spec.ios.deployment_target = '9.0'
+  spec.swift_versions = '5.0'
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  spec.description  = <<-DESC
-                   DESC
 
-  spec.homepage     = "http://EXAMPLE/JForm"
+
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -38,7 +45,7 @@ Pod::Spec.new do |spec|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  spec.license      = "MIT (example)"
+
   # spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
@@ -52,7 +59,7 @@ Pod::Spec.new do |spec|
   #  profile URL.
   #
 
-  spec.author             = { "qianxing" => "kikido1992@gmail.com" }
+
   # Or just: spec.author    = "qianxing"
   # spec.authors            = { "qianxing" => "kikido1992@gmail.com" }
   # spec.social_media_url   = "https://twitter.com/qianxing"
@@ -79,7 +86,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "http://EXAMPLE/JForm.git", :tag => "#{spec.version}" }
+
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -90,8 +97,8 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "Classes", "Classes/**/*.{h,m}"
-  spec.exclude_files = "Classes/Exclude"
+
+
 
   # spec.public_header_files = "Classes/**/*.h"
 
