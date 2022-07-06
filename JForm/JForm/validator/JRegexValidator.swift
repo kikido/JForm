@@ -12,7 +12,7 @@ public class JRegexValidator: JValidateProtocol {
     let regex: String
     let message: String
     
-    init(regex: String, message: String) {
+    public init(regex: String, message: String) {
         self.regex = regex
         self.message = message
     }

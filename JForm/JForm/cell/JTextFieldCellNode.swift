@@ -34,7 +34,7 @@ public class JTextFieldCellNode: JBaseCellNode {
     public let textFieldNode: ASDisplayNode
     @objc public var textField: UITextField?
         
-    required init(with rowDescriptor: RowDescriptor) {
+    public required init(with rowDescriptor: RowDescriptor) {
         textFieldNode = ASDisplayNode.init { UITextField() }
         super.init(with: rowDescriptor)
     }

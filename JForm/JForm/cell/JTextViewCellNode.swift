@@ -18,7 +18,7 @@ public class JTextViewCellNode: JBaseCellNode {
     @objc public let textViewNode: ASEditableTextNode
     public var textView: UITextView?
         
-    required init(with rowDescriptor: RowDescriptor) {
+    public required init(with rowDescriptor: RowDescriptor) {
         textViewNode = ASEditableTextNode()
         super.init(with: rowDescriptor)
     }

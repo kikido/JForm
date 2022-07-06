@@ -172,7 +172,7 @@ class _JDateInlineCellNode: JBaseCellNode {
     let datePickerNode: ASDisplayNode
     fileprivate var fromRow: RowDescriptor?
     
-    required init(with rowDescriptor: RowDescriptor) {
+    public required init(with rowDescriptor: RowDescriptor) {
         datePickerNode = ASDisplayNode.init { UIDatePicker() }
         datePickerNode.style.height = ASDimensionMake(216)
         

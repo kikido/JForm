@@ -89,13 +89,13 @@ public class FormDescriptor: BaseDescriptor {
         }
     }
 
-    override init(withStyle style: JStyle? = nil) {
+    public override init(withStyle style: JStyle? = nil) {
         super.init(withStyle: style)
         // kvo
         self.addObserver(self, forKeyPath: "sourceFormSections", options: [.new, .old], context: nil)
     }
     
-    convenience init() {
+    public convenience init() {
         self.init(withStyle: nil)
     }
     

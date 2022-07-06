@@ -18,7 +18,7 @@ public class JSwitchCellNode: JBaseCellNode {
     public let switchNode: ASDisplayNode
     @objc public var switchControl: UISwitch?
     
-    required init(with rowDescriptor: RowDescriptor) {
+    public required init(with rowDescriptor: RowDescriptor) {
         switchNode = ASDisplayNode.init { UISwitch() }
         switchNode.style.preferredSize = CGSize(width: 51, height: 31)
         

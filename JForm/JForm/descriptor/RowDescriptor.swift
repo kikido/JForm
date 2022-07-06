@@ -125,7 +125,7 @@ public class RowDescriptor: BaseDescriptor {
     
     public lazy var validators = [JValidateProtocol]()
     
-    init(withTag tag: String, rowType: RowDescriptor.RowType, title: String?, imageName: String? = nil, style: JStyle? = nil) {
+    public init(withTag tag: String, rowType: RowDescriptor.RowType, title: String?, imageName: String? = nil, style: JStyle? = nil) {
         self.tag = tag
         self.title = title
         self.imageName = imageName
@@ -137,7 +137,7 @@ public class RowDescriptor: BaseDescriptor {
         self.addObserver(self, forKeyPath: "value", options: [.old, .new], context: nil)
     }
     
-    convenience init(withTag tag: String, rowType: RowDescriptor.RowType, title: String?) {
+    public convenience init(withTag tag: String, rowType: RowDescriptor.RowType, title: String?) {
         self.init(withTag: tag, rowType: rowType, title: title, imageName: nil, style: nil)
     }
     

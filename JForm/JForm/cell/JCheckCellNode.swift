@@ -17,7 +17,7 @@ public class JCheckCellNode: JBaseCellNode {
     
     @objc public let checkNode: ASImageNode
     
-    required init(with rowDescriptor: RowDescriptor) {
+    public required init(with rowDescriptor: RowDescriptor) {
         checkNode = ASImageNode()
         checkNode.image = UIImage.imageInBundle(named: "jt_mark")
         super.init(with: rowDescriptor)

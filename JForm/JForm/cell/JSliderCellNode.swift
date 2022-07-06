@@ -23,7 +23,7 @@ public class JSliderCellNode: JBaseCellNode {
     public let sliderNode: ASDisplayNode
     @objc public var slider: UISlider?
     
-    required init(with rowDescriptor: RowDescriptor) {
+    public required init(with rowDescriptor: RowDescriptor) {
         sliderNode = ASDisplayNode.init { UISlider() }
         sliderNode.style.height = ASDimensionMake(30)
 

@@ -77,11 +77,11 @@ public class JForm: UIView {
     }
     
     
-    convenience init(withDecriptor descriptor: FormDescriptor) {
+    public convenience init(withDecriptor descriptor: FormDescriptor) {
         self.init(withDecriptor: descriptor, frame: .zero)
     }
     
-    required init(withDecriptor descriptor: FormDescriptor, frame: CGRect) {
+    public required init(withDecriptor descriptor: FormDescriptor, frame: CGRect) {
         formDescriptor = descriptor
         tableNode = ASTableNode(style: .grouped)
         

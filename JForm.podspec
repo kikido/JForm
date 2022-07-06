@@ -20,11 +20,12 @@ Pod::Spec.new do |spec|
   spec.summary      = "简单快速的创建复杂且流畅的表单"
   spec.homepage     = "https://github.com/kikido/JForm"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
-  spec.author             = { "qianxing" => "kikido1992@gmail.com" }
+  spec.author       = { "qianxing" => "kikido1992@gmail.com" }
   spec.source       = { :git => "https://github.com/kikido/JForm.git", :tag => "#{spec.version}" }
-  spec.source_files  = "Classes", "JForm/JForm/**/*.{swift}"
+  spec.source_files = "Classes", "JForm/JForm/**/*.{swift}"
   spec.dependency "Texture"
   spec.requires_arc = true
+  spec.resource     = '/JTForm.bundle'
   spec.ios.deployment_target = '9.0'
   spec.swift_versions = '5.0'
 

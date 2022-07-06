@@ -22,7 +22,7 @@ public class JStepCounterCellNode: JBaseCellNode {
     @objc public dynamic var maximumValue: Double = 100
     @objc public dynamic var stepValue: Double = 1
         
-    required init(with rowDescriptor: RowDescriptor) {
+    public required init(with rowDescriptor: RowDescriptor) {
         stepNode = ASDisplayNode.init { UIStepper() }
         stepNode.style.preferredSize = CGSize(width: 80, height: 40)
         

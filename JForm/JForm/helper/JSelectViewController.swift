@@ -16,7 +16,7 @@ class JSelectViewController: ASDKViewController<ASDisplayNode> {
     
     lazy var selectIndexSet = IndexSet()
     
-    init(row: RowDescriptor, form: JForm?) {
+    public init(row: RowDescriptor, form: JForm?) {
         self.row = row
         self.form = form
         

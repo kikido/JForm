@@ -18,7 +18,7 @@ public class JSegmentCellNode: JBaseCellNode {
     public let segmentNode: ASDisplayNode
     @objc public var segmentControl: UISegmentedControl?
     
-    required init(with rowDescriptor: RowDescriptor) {
+    public required init(with rowDescriptor: RowDescriptor) {
         segmentNode = ASDisplayNode.init { UISegmentedControl() }
         super.init(with: rowDescriptor)
     }

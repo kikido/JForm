@@ -39,7 +39,7 @@ public class JDateCellNode: JBaseCellNode {
         return datePicker
     }()
     
-    required init(with rowDescriptor: RowDescriptor) {
+    public required init(with rowDescriptor: RowDescriptor) {
         triggerNode = ASEditableTextNode()
         triggerNode.scrollEnabled = false
         triggerNode.style.preferredSize = CGSize(width: 0.01, height: 0.01)

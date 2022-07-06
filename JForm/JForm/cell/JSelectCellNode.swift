@@ -44,7 +44,7 @@ public class JSelectCellNode: JBaseCellNode {
         return  pickerView
     }()
     
-    required init(with rowDescriptor: RowDescriptor) {
+    public required init(with rowDescriptor: RowDescriptor) {
         triggerNode = ASEditableTextNode()
         
         accessoryNode = ASImageNode()

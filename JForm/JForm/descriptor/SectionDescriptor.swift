@@ -103,13 +103,13 @@ public class SectionDescriptor: BaseDescriptor {
     /** 尾视图高度 */
     public var footerHeight: CGFloat = 25
         
-    override init(withStyle style: JStyle? = nil) {
+    public override init(withStyle style: JStyle? = nil) {
         super.init(withStyle: style)
         // kvo
         self.addObserver(self, forKeyPath: "sourceFormRows", options: [.new, .old], context: nil)
     }
     
-    convenience init() {
+    public convenience init() {
         self.init(withStyle: nil)
     }
     
