@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "JForm"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.2"
   spec.summary      = "简单快速的创建复杂且流畅的表单"
   spec.homepage     = "https://github.com/kikido/JForm"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
@@ -25,7 +25,7 @@ Pod::Spec.new do |spec|
   spec.source_files = "Classes", "JForm/JForm/**/*.{swift}"
   spec.dependency "Texture"
   spec.requires_arc = true
-  spec.resource     = '/JTForm.bundle'
+  spec.resource     = "JForm/JForm.bundle"
   spec.ios.deployment_target = '9.0'
   spec.swift_versions = '5.0'
 
