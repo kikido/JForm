@@ -16,27 +16,35 @@ class FormViewController: BaseViewController {
         
         self.title = "表单"
         
-        let form = FormDescriptor.init()
-        form.addAsteriskToRequiredRow = true
-        form.autoAddPlaceholder = true
-        
+        let formDescriptor = FormDescriptor.init()
+        formDescriptor.addAsteriskToRequiredRow = true
+        formDescriptor.autoAddPlaceholder = true
         
         // s 1
         let section = SectionDescriptor.init()
-        form.add(section)
+        formDescriptor.add(section)
 
         var row: RowDescriptor!
         
         row = RowDescriptor.init(withTag: "公司名称", rowType: .text, title: "公司名称")
+        row.imageURL = netImageUrl()
+        row.imageEditBlock = { n in
+            n.style.preferredSize = CGSize(width: 80, height: 80)
+        }
         row.isRequired = true
         row.value = "测试"
         section.add(row)
         
         row = RowDescriptor.init(withTag: "法人代表", rowType: . name, title: "法人代表")
+        row.imageURL = netImageUrl(width: 80, height: 80)
+        row.imageEditBlock = { n in
+            n.style.preferredSize = CGSize(width: 35, height: 35)
+        }
         row.isRequired = true
         section.add(row)
               
         row = RowDescriptor.init(withTag: "经营年限", rowType: .integer, title: "经营年限")
+        row.imageName = "menu_icon_commitmentletter"
         row.unit = "年"
         row.addValidator(JRegexValidator.init(regex: "^([5-9][0-9]|100)$", message: "经营年限应大50"))
         section.add(row)
@@ -51,7 +59,7 @@ class FormViewController: BaseViewController {
         row.maxNumberOfCharacters = 120
         section.add(row)
         
-        self.form = JForm.init(withDecriptor: form)
+        self.form = JForm.init(withDecriptor: formDescriptor, frame: self.view.bounds)
         self.form!.accessibilityLabel = _formForm
         self.view.addSubview(self.form!)
         

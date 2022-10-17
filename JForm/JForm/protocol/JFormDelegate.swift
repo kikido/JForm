@@ -10,4 +10,5 @@ import Foundation
 public protocol JFormDelegate: AnyObject {
     
     func rowValueDidChanged(_ row: RowDescriptor, oldValue: Any?, newValue: Any?)
+    
 }

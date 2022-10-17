@@ -8,11 +8,10 @@ target 'JForm' do
 
   # Pods for JForm
   pod "Texture", :modular_headers => true
-end
   
-target 'JFormTests' do
-  inherit! :search_paths
-  # Pods for testing
-  pod 'KIF', :configurations => ['Debug']
+  target 'JFormTests' do
+    inherit! :search_paths
+    # Pods for testing
+    pod 'KIF', :configurations => ['Debug']
+  end
 end
-

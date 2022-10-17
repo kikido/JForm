@@ -41,6 +41,7 @@ public class JTextViewCellNode: JBaseCellNode {
         self.textView = textView
         textView.textColor = detailColor
         textView.font = detailFont
+        textView.textAlignment = laysOutHorizontally ? .right : .left
         
         if let placeholder = placeholder {
             textViewNode.attributedPlaceholderText = appendInterpolation(placeholder, style: .font(self.placeholderFont), .color(self.placeholderColor), .alignment(laysOutHorizontally ? .right : .left))
@@ -61,7 +62,7 @@ public class JTextViewCellNode: JBaseCellNode {
             var children: [ASDisplayNode]
             
             // 是否添加 image
-            if rowDescriptor.imageName != nil {
+            if isNeedImageNode {
                 children = [self.imageNode, self.titleNode, self.textViewNode]
             } else {
                 children = [self.titleNode, self.textViewNode]
@@ -73,7 +74,7 @@ public class JTextViewCellNode: JBaseCellNode {
             var topStack: ASStackLayoutSpec!
             
             // 是否添加 image
-            if rowDescriptor.imageName != nil {
+            if isNeedImageNode {
                 topStack = ASStackLayoutSpec(direction: .horizontal, spacing: 10, justifyContent: .start, alignItems: .center, children: [self.imageNode, self.titleNode])
             } else {
                 topStack = ASStackLayoutSpec(direction: .horizontal, spacing: 10, justifyContent: .start, alignItems: .start, children: [self.titleNode])

@@ -117,6 +117,14 @@ class TextViewController: BaseViewController {
         
         self.form = JForm.init(withDecriptor: form)
         self.view.addSubview(self.form!)
+        
+        let button = UIButton.init(type: .custom)
+        button.setTitle("edit", for: .normal)
+        button.setTitleColor(.red, for: .normal)
+        button.sizeToFit()
+        button.addTarget(self, action: #selector(buttonAction(sender:)), for: .touchUpInside)
+        let buttonItem = UIBarButtonItem.init(customView: button)
+        self.navigationItem.rightBarButtonItem = buttonItem
     }
     
     let count = 0
@@ -127,5 +135,11 @@ class TextViewController: BaseViewController {
 
     override func viewWillLayoutSubviews() {
         self.form?.frame = self.view.bounds
+    }
+    
+    @objc func buttonAction(sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        sender.setTitle(sender.isSelected ? "editing" : "edit", for: .normal)
+        form?.tableView.isEditing = sender.isSelected
     }
 }

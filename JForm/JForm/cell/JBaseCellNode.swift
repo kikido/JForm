@@ -9,16 +9,23 @@ import AsyncDisplayKit
 
 open class JBaseCellNode: ASCellNode {
 
+    weak var _aRowDescriptor: RowDescriptor?
     /// 行描述子，为 cell 提供数据及其它的一些行为
-    public let rowDescriptor: RowDescriptor
+    public var rowDescriptor: RowDescriptor {
+        return _aRowDescriptor ?? RowDescriptor(withTag: "", rowType: .info, title: nil)
+    }
     
-    @objc public var titleNode: ASTextNode
+    @objc public let titleNode: ASTextNode
     
-    @objc public var detailNode: ASTextNode
+    @objc public let detailNode: ASTextNode
     
-    @objc public var imageNode: ASImageNode
+    @objc public let imageNode: NetworkImageNode
     
     @objc public let unitNode: ASTextNode
+    
+    public var isNeedImageNode: Bool {
+        return rowDescriptor.imageName != nil || rowDescriptor.imageURL != nil
+    }
     
     /// 控件布局方向。默认水平布局
     open var laysOutHorizontally: Bool {
@@ -26,7 +33,7 @@ open class JBaseCellNode: ASCellNode {
     }
     
     required public init(with rowDescriptor: RowDescriptor) {
-        self.rowDescriptor = rowDescriptor
+        _aRowDescriptor = rowDescriptor
         
         titleNode = ASTextNode()
         titleNode.style.maxHeight = ASDimensionMake(cellTitleMaxHeight)
@@ -36,7 +43,15 @@ open class JBaseCellNode: ASCellNode {
         unitNode = ASTextNode()
         unitNode.maximumNumberOfLines = 1
 
-        imageNode = ASImageNode()
+        imageNode = NetworkImageNode()
+        imageNode.imageName = rowDescriptor.imageName
+        imageNode.URL = rowDescriptor.imageURL
+        imageNode.onDidLoad({ n in
+            if let n = n as? NetworkImageNode, let block = rowDescriptor.imageEditBlock {
+                block(n)
+            }
+        })
+        
 
         super.init()
 
@@ -92,7 +107,7 @@ open class JBaseCellNode: ASCellNode {
 
 extension JBaseCellNode {
     
-    var closeForm: JForm? {
+    public var closeForm: JForm? {
         get {
             rowDescriptor.section?.form?.delegate as? JForm
         }
@@ -158,7 +173,7 @@ extension JBaseCellNode {
     }
 
     /** 更新 title 和 detail */
-    open func updateTtitleAndDetail() {
+    public func updateTtitleAndDetail() {
         if let form = rowDescriptor.section?.form, let _ = form.delegate {
             // title
             let required = rowDescriptor.isRequired && form.addAsteriskToRequiredRow
@@ -175,8 +190,9 @@ extension JBaseCellNode {
             self.detailNode.attributedText = valueDetail
             
             // image
-            if let imageName = rowDescriptor.imageName {
-                imageNode.image = UIImage(named: imageName)
+            if let imageName = rowDescriptor.imageName, let image = UIImage(named: imageName) {
+                imageNode.image = image
+                imageNode.setNeedsLayout()
             }
         } else {
             self.titleNode.attributedText = nil
@@ -262,12 +278,15 @@ extension UIImage {
         
         var image = UIImage.init(named: name)
         if image == nil {
-            if let url = Bundle.main.url(forResource: "JForm", withExtension: "bundle"), Helper.scale == nil {
+            let bundle = Bundle(for: JForm.self)
+            let b = Bundle(url: bundle.url(forResource: "JForm", withExtension: "bundle")!)
+            
+            if Helper.scale == nil {
                 objc_sync_enter(name)
 
                 if Helper.scale == nil {
                     Helper.scale = UIScreen.main.scale
-                    Helper.bundle = Bundle.init(url: url)
+                    Helper.bundle = b
                 }
                 
                 objc_sync_exit(name)

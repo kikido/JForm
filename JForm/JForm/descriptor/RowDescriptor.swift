@@ -21,8 +21,29 @@ public class RowDescriptor: BaseDescriptor {
     /** 标题 */
     public let title: String?
     
-    /** 图片名称，目前仅支持本地图片 */
-    public let imageName: String?
+    /** 本地图片名称 */
+    public var imageName: String? {
+        willSet {
+            if let val = newValue, isCellLoaded {
+                cell.imageNode.imageName = val
+            }
+        }
+    }
+    
+    /**
+     * 网络图片地址
+     *
+     * 优先级 imageURL > imageName
+     */
+    public var imageURL: URL? {
+        willSet {
+            if let val = newValue, isCellLoaded {
+                cell.imageNode.URL = val
+            }
+        }
+    }
+    
+    public var imageEditBlock: ((_ imageNode: NetworkImageNode) -> Void)?
     
     /** 值 */
     @objc public dynamic var value: Any?
@@ -80,7 +101,7 @@ public class RowDescriptor: BaseDescriptor {
     // @Cell
     
     /** 对应的单元行是否已经创建 */
-    public var isCellExist: Bool = false
+    public var isCellLoaded: Bool = false
     
     private var _cell: JBaseCellNode?
     private var _height: CGFloat = RowInitialHeight
@@ -109,7 +130,7 @@ public class RowDescriptor: BaseDescriptor {
      搭配 unit 使用。例如，表单需要显示单位为 ’万元‘ integer 类型的单元行，而传给服务器的值单位可能是 ’元‘。此时可以选择合适的 valueTransformer，在界面展示时会显示换算后的文本，而传给服务器会是基本单位的值
      */
     public var valueTransformer: ValueTransformer?
-
+    
     // @Select
     
     /** 选择项 */
@@ -161,7 +182,7 @@ extension RowDescriptor {
             let cellType = self.cellType
             let cell = cellType.init(with: self)
             _cell = cell
-            isCellExist = true
+            isCellLoaded = true
             
             // set config
             for (k, v) in configAfterCreate {
@@ -197,7 +218,7 @@ extension RowDescriptor {
     }
     
     public func update() {
-        if isCellExist && section?.form?.delegate != nil {
+        if isCellLoaded && section?.form?.delegate != nil {
             self.cell.update()
             
             for (k, v) in configAfterUpdate {

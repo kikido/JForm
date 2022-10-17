@@ -35,36 +35,36 @@ extension BaseDescriptor {
     public class Style {
 
         /** 详情占位文本颜色 */
-        var placeholderColor: UIColor?
+        public var placeholderColor: UIColor?
         /** 标题颜色 */
-        var titleColor: UIColor?
+        public var titleColor: UIColor?
         /** 高亮时标题颜色 */
-        var titleHighlightColor: UIColor?
+        public var titleHighlightColor: UIColor?
         /** 只读时标题颜色 */
-        var titleDisabledColor: UIColor?
+        public var titleDisabledColor: UIColor?
         /** 详情颜色 */
-        var detailColor: UIColor?
+        public var detailColor: UIColor?
         /** 只读时详情颜色 */
-        var detailDisabledColor: UIColor?
+        public var detailDisabledColor: UIColor?
         /** 控件背景颜色 */
-        var backgroundColor: UIColor?
+        public var backgroundColor: UIColor?
         
         /** 标题字体 */
-        var titleFont: UIFont?
+        public var titleFont: UIFont?
         /** 高亮时标题字体 */
-        var titleHighlightFont: UIFont?
+        public var titleHighlightFont: UIFont?
         /** 只读时标题字体 */
-        var titleDisabledFont: UIFont?
+        public var titleDisabledFont: UIFont?
         /** 详情字体 */
-        var detailFont: UIFont?
+        public var detailFont: UIFont?
         /** 只读时详情字体 */
-        var detailDisabledFont: UIFont?
+        public var detailDisabledFont: UIFont?
         /** 详情占位文本字体 */
-        var placeholderFont: UIFont?
+        public var placeholderFont: UIFont?
         
         // MARK: - ROW UI
         
-        var height: CGFloat?
+        public var height: CGFloat?
         
         public typealias StyleInitHandler = ((JStyle) -> (Void))
 

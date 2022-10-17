@@ -63,6 +63,7 @@ public class JSelectCellNode: JBaseCellNode {
             triggerNode.textView.inputView = customInputView()
         }
         triggerNode.isUserInteractionEnabled = rowDescriptor.type == .picker && !rowDescriptor.isDisabled
+        triggerNode.textView.isUserInteractionEnabled = triggerNode.isUserInteractionEnabled
     }
     
     public override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
@@ -81,7 +82,7 @@ public class JSelectCellNode: JBaseCellNode {
 
             var children: [ASDisplayNode]
             // 是否添加 image
-            if rowDescriptor.imageName != nil {
+            if isNeedImageNode {
                 children = [self.imageNode, self.titleNode, self.detailNode, self.accessoryNode, self.triggerNode]
             } else {
                 children = [self.titleNode, self.detailNode, self.accessoryNode, self.triggerNode]
@@ -94,7 +95,7 @@ public class JSelectCellNode: JBaseCellNode {
             var topStack: ASStackLayoutSpec!
             
             // 是否添加 image
-            if rowDescriptor.imageName != nil {
+            if isNeedImageNode {
                 topStack = ASStackLayoutSpec(direction: .horizontal, spacing: 10, justifyContent: .start, alignItems: .center, children: [self.imageNode, self.titleNode])
             } else {
                 topStack = ASStackLayoutSpec(direction: .horizontal, spacing: 10, justifyContent: .start, alignItems: .start, children: [self.titleNode])
@@ -119,7 +120,9 @@ public class JSelectCellNode: JBaseCellNode {
         case .picker:
             break
         default:
-            rowDescriptor.action?(rowDescriptor)
+            DispatchQueue.main.async {
+                self.rowDescriptor.action?(self.rowDescriptor)
+            }
         }
     }
     

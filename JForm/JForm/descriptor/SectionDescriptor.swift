@@ -53,7 +53,7 @@ public class SectionDescriptor: BaseDescriptor {
                 _isDisabled = newValue
                 
                 formRows.forEach { row in
-                    if row.isCellExist && row.cell.isFirstResponder() {
+                    if row.isCellLoaded && row.cell.isFirstResponder() {
                         _ = row.cell.resignFirstResponder()
                     }
                     row.update()
@@ -225,7 +225,7 @@ extension SectionDescriptor {
         removeRowsFromAll(rows)
         
         rows.forEach { row in
-            if row.isCellExist && row.cell.isFirstResponder() {
+            if row.isCellLoaded && row.cell.isFirstResponder() {
                 row.cell.resignFirstResponder()
             }
         }
@@ -272,7 +272,7 @@ extension SectionDescriptor {
     }
     
     fileprivate func hideRow(_ row: RowDescriptor) {
-        if row.isCellExist && row.cell.isFirstResponder() {
+        if row.isCellLoaded && row.cell.isFirstResponder() {
             row.cell.resignFirstResponder()
         }
         removeRowsFromForm([row])

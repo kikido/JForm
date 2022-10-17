@@ -12,6 +12,17 @@ public struct OptionItem {
     public var title: String
     public var value: String
     
+    public init(title: String, value: String) {
+       self.title = title
+       self.value = value
+    }
+
+    public init?(title: String?, value: String?) {
+       guard let title = title, let value = value else { return nil }
+       self.title = title
+       self.value = value
+    }
+    
     public var isEmpty: Bool {
         return value.isEmpty
     }

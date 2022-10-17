@@ -61,7 +61,7 @@ public class FormDescriptor: BaseDescriptor {
                 
                 formSections.forEach { section in
                     section.formRows.forEach { row in
-                        if row.isCellExist && row.cell.isFirstResponder() {
+                        if row.isCellLoaded && row.cell.isFirstResponder() {
                             row.cell.resignFirstResponder()
                         }
                         row.update()
@@ -285,7 +285,7 @@ extension FormDescriptor {
     
     private func hideSection(_ section: SectionDescriptor) {
         for row in section.formRows {
-            if row.isCellExist && row.cell.isFirstResponder() {
+            if row.isCellLoaded && row.cell.isFirstResponder() {
                 row.cell.resignFirstResponder()
                 break;
             }

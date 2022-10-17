@@ -147,6 +147,7 @@ class UITests: KIFTestCase {
         
         for type in textTags.filter({ $0 != .textView }) {
             if let row = _form?.row(withTag: type.rawValue) {
+                _form?.ensureRowIsVisible(row)
                 let cell = tester().waitForView(withAccessibilityLabel: type.rawValue)
                 tester().enterText("1", into: nil, in: cell, expectedResult: nil)
 
@@ -928,10 +929,10 @@ class UITests: KIFTestCase {
     
     func testCellForRowIsExist() {
         let row = RowDescriptor.init(withTag: "node", rowType: .info, title: nil)
-        XCTAssertFalse(row.isCellExist);
+        XCTAssertFalse(row.isCellLoaded);
         
         _form?.add(row)
-        XCTAssertTrue(row.isCellExist);
+        XCTAssertTrue(row.isCellLoaded);
     }
     
     func testRowManualSetValue() {
@@ -1105,7 +1106,7 @@ class UITests: KIFTestCase {
             if type == .pushSelect || type == .multipleSelect {
                 tester().tapRow(at: IndexPath(row: 0, section: 0), inTableViewWithAccessibilityIdentifier: "tableview")
                 if type == .multipleSelect {
-                    tester().tapView(withAccessibilityLabel: NSLocalizedString("Back", comment: ""), traits: .button)
+                    tester().tapView(withAccessibilityLabel: NSLocalizedString("Form", comment: ""), traits: .button)
                 }
             } else {
                 tester().waitForView(withAccessibilityLabel: "西瓜")

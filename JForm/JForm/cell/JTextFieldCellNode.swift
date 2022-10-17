@@ -75,7 +75,7 @@ public class JTextFieldCellNode: JBaseCellNode {
             var children: [ASDisplayNode]!
             
             // 是否添加 image
-            if rowDescriptor.imageName != nil {
+            if isNeedImageNode {
                 children = [self.imageNode, self.titleNode, self.textFieldNode]
             } else {
                 children = [self.titleNode, self.textFieldNode]
@@ -98,7 +98,7 @@ public class JTextFieldCellNode: JBaseCellNode {
             var topStack: ASStackLayoutSpec!
             
             // 是否添加 image
-            if rowDescriptor.imageName != nil {
+            if isNeedImageNode {
                 topStack = ASStackLayoutSpec(direction: .horizontal, spacing: 10, justifyContent: .start, alignItems: .center, children: [self.imageNode, self.titleNode])
             } else {
                 topStack = ASStackLayoutSpec(direction: .horizontal, spacing: 10, justifyContent: .start, alignItems: .start, children: [self.titleNode])

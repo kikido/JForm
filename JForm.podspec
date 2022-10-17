@@ -16,8 +16,8 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "JForm"
-  spec.version      = "0.0.2"
-  spec.summary      = "简单快速的创建复杂且流畅的表单"
+  spec.version      = "0.0.3"
+  spec.summary      = "简单快速的创建复杂表单"
   spec.homepage     = "https://github.com/kikido/JForm"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
   spec.author       = { "qianxing" => "kikido1992@gmail.com" }

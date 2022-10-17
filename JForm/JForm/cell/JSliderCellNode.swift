@@ -66,7 +66,7 @@ public class JSliderCellNode: JBaseCellNode {
         var topChildren: [ASDisplayNode]
         
         // 是否添加 image
-        if rowDescriptor.imageName != nil {
+        if isNeedImageNode {
             topChildren = [self.imageNode, self.titleNode, self.detailNode]
         } else {
             topChildren = [self.titleNode, self.detailNode]

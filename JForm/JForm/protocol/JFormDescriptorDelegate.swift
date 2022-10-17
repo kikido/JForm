@@ -18,4 +18,5 @@ public protocol JFormDescriptorDelegate: AnyObject {
     func rowsDidRemoved(atIndexPaths indexPaths: [IndexPath])
     
     func rowValueDidChanged(_ row: RowDescriptor, oldValue: Any?, newValue: Any?)
+    
 }

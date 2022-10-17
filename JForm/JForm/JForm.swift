@@ -106,7 +106,6 @@ public class JForm: UIView {
     deinit {
         print("jFrom dealloc")
         NotificationCenter.default.removeObserver(self)
-        formDescriptor.delegate = nil
     }
     
     public override func layoutSubviews() {
@@ -164,7 +163,11 @@ extension JForm: ASTableDelegate {
     
     public func tableNode(_ tableNode: ASTableNode, constrainedSizeForRowAt indexPath: IndexPath) -> ASSizeRange {
         let row = self.formDescriptor.row(at: indexPath)!
-        return row.height < 0 ? ASSizeRangeUnconstrained : ASSizeRangeMake(CGSize(width: 0, height: row.height))
+        if (row.height == UnspecifiedRowHeight) {
+            let styleHeight = row.style?.height ?? (row.section?.style?.height ?? row.section?.form?.style?.height)
+            return styleHeight == nil ? ASSizeRangeUnconstrained : ASSizeRangeMake(CGSize(width: 0, height: styleHeight!))
+        }
+        return ASSizeRangeMake(CGSize(width: 0, height: row.height))
     }
     
     public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -319,14 +322,7 @@ extension JForm {
         var allValues = [String: Any]()
         for section in formDescriptor.allSections {
             for row in section.allRows {
-                var curValue: Any!
-                // 别名或者 tag
-                if let optionItem = row.value as? OptionItem {
-                    curValue = optionItem.value
-                } else if let value = row.value {
-                    curValue = value
-                }
-                allValues[row.cell.parameterNameForRow() ?? row.tag] = curValue
+                allValues[row.cell.parameterNameForRow() ?? row.tag] = row.value
             }
         }
         return allValues
@@ -570,7 +566,7 @@ extension JForm {
     public func update() {
         formDescriptor.formSections.forEach { section in
             section.formRows.forEach { row in
-                if row.isCellExist {
+                if row.isCellLoaded {
                     row.update()
                 }
             }

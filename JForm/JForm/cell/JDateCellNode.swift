@@ -70,7 +70,7 @@ public class JDateCellNode: JBaseCellNode {
         var children: [ASDisplayNode]
         
         // 是否添加 image
-        if rowDescriptor.imageName != nil {
+        if isNeedImageNode {
             children = [self.imageNode, self.titleNode, self.detailNode, self.triggerNode]
         } else {
             children = [self.titleNode, self.detailNode, self.triggerNode]
